@@ -12,7 +12,6 @@
 
       <li class="nav-item {{ active_class(if_route('topics.index')) }}"> <a class="nav-link" href="{{ route('topics.index') }}">话题</a></li>
 
-      {{-- active_class 如果传参满足指定条件 ($condition) ，此函数将返回 $activeClass，否则返回 $inactiveClass。 --}}
       <li class="nav-item {{ category_nav_active(1) }}"> <a class="nav-link" href="{{ route('categories.show',1) }}">分享</a></li>
 
       <li class="nav-item {{ category_nav_active(2) }}"> <a class="nav-link" href="{{ route('categories.show',2) }}">教程</a></li>
