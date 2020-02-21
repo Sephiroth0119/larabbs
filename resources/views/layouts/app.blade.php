@@ -9,6 +9,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title','LaraBBS')-Laravel 进阶教程</title>
+  <meta name="descriptopn" content="@yield('description','laraBBS 爱好者社区')"/>
   <link rel="stylesheet" href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
 </head>
