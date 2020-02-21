@@ -11,6 +11,8 @@ class TopicObserver
 {
     public function save(Topic $topic)
     {
+        $topic->body = clean($topic->body, 'user_toppic_body');
+
         $topic->excerpt = make_excerpt($topic->body);
     }
 }
