@@ -82,6 +82,16 @@
     $(document).ready(function() {
       var editor = new Simditor({
         textarea: $('#editor'),
+        upload:{
+          url:'{{ route('topics.upload_image')}}',
+          params:{
+            _token:'{{ csrf_token() }}'//防止csrf跨站请求伪造的_token参数
+          },
+          fillKey:'upload_file',//键值
+          connectionCount:3,//最多上传
+          leaveConfirm:'文件上传中，关闭此页面将取消上传。'//上传过程中用户关闭页面时的提醒
+        },
+        pasteImage:true,//设定图片是否支持黏贴上传
       });
     });
   </script>
