@@ -22,7 +22,7 @@ return [
         },
         //不允许删除
         'delete' => function ($model) {
-            return true;
+            return false;
         },
         'view' => function ($model) {
             return true;
