@@ -8,8 +8,10 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title','LaraBBS')-Laravel 进阶教程</title>
+  <title>@yield('title','LaraBBS')-{{ setting('site_name','Laravel 进阶教程') }}</title>
   <meta name="descriptopn" content="@yield('description','laraBBS 爱好者社区')"/>
+  <meta naem="keyword" content="@yield('keyword',setting('seo_keyword','LaraBBS,社区,论坛,开发者论坛'))"/>
+  {{-- styles --}}
   <link rel="stylesheet" href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
 </head>
