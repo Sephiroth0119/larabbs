@@ -15,6 +15,7 @@ class Policy
 
     public function before($user, $ability)
     {
+        //if user have permissions to manage content
         if ($user->can('manage_contents')) {
             return true;
         }
